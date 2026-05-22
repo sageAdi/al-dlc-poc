@@ -5,7 +5,7 @@ export type AuthEmailInput = {
 };
 
 export function verificationEmail(input: AuthEmailInput) {
-  const link = `${input.appUrl}/verify-email?token=${encodeURIComponent(input.token || '')}`;
+  const link = `${input.appUrl}/auth/verify-email?token=${encodeURIComponent(input.token || '')}`;
   return {
     subject: 'Verify your email',
     text: `Verify your email by opening this link: ${link}`,
@@ -14,7 +14,7 @@ export function verificationEmail(input: AuthEmailInput) {
 }
 
 export function passwordResetEmail(input: AuthEmailInput) {
-  const link = `${input.appUrl}/reset-password?token=${encodeURIComponent(input.token || '')}`;
+  const link = `${input.appUrl}/auth/reset-password?token=${encodeURIComponent(input.token || '')}`;
   return {
     subject: 'Reset your password',
     text: `Reset your password by opening this link: ${link}`,

@@ -428,3 +428,27 @@ Approved the plan
 **Context**: AI-DLC documentation generation for repository README.
 
 ---
+
+## Email Verification Route Bug Fix Request
+**Timestamp**: 2026-05-22T05:10:22Z
+**User Input**: "Using AI-DLC figure out the verifcation email is sent to /verify-email but in the ui it is /auth/verify-email fix this"
+**AI Response**: "Loaded AI-DLC workflow context and inspected backend email templates, frontend routes, and related documentation. Confirmed the backend verification email generated /verify-email while the Nuxt route is /auth/verify-email. Updated the verification email link to /auth/verify-email and aligned password reset links with /auth/reset-password. Added focused email template tests and created aidlc-docs/construction/plans/email-verification-route-fix-plan.md."
+**Context**: Backend email template route bug fix.
+
+---
+
+## Backend Test Runner Startup Fix
+**Timestamp**: 2026-05-22T05:10:22Z
+**User Input**: "Using AI-DLC figure out the verifcation email is sent to /verify-email but in the ui it is /auth/verify-email fix this"
+**AI Response**: "The focused backend test initially failed before execution because api/vitest.config.ts imported vite-tsconfig-paths, which resolved as ESM and could not be loaded through the current config path. Verified the backend source and tests do not use the @/ alias, then removed the unused plugin so Vitest can start."
+**Context**: Test runner configuration fix required to verify the email route bug fix.
+
+---
+
+## Email Verification Route Fix Verification
+**Timestamp**: 2026-05-22T05:11:37Z
+**User Input**: "Using AI-DLC figure out the verifcation email is sent to /verify-email but in the ui it is /auth/verify-email fix this"
+**AI Response**: "Ran backend tests with 'pnpm test -- email.templates.spec.ts'. The test run passed with 3 test files and 10 tests, including focused assertions that verification email links use /auth/verify-email and password reset email links use /auth/reset-password."
+**Context**: Verification of backend email template route fix.
+
+---
