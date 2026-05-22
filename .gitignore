@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Build and framework output
+dist/
+.nuxt/
+.output/
+coverage/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Private keys, certificates, and credential files
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.secret
+*.secrets
+*.credential
+*.credentials
+*.token
+secrets.*
+credentials.*
+tokens.*
+serviceAccount*.json
+firebase-service-account*.json
+google-credentials*.json
+aws-credentials*
+
+# Logs and local caches
+*.log
+.DS_Store
+.cache/
+.tmp/
+tmp/
+temp/
+
+# Editor and local tool state
+.idea/
+.vscode/
